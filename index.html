@@ -1,116 +1,7 @@
 <html>
 <head>
     <title>Dynamic Resume</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: row;
-            gap: 20px;
-            max-width: 1200px;
-            width: 100%;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .form-container, .resume-container {
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            flex: 1;
-            overflow-y: auto;
-            max-height: 90vh;
-        }
-
-        .form-container {
-            max-width: 400px;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2em;
-            color: #333;
-        }
-
-        header p {
-            margin: 5px 0;
-            color: #666;
-        }
-
-        section {
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            margin-bottom: 10px;
-            font-size: 1.5em;
-            color: #333;
-            border-bottom: 2px solid #333;
-            padding-bottom: 5px;
-        }
-
-        .job, .education {
-            margin-bottom: 10px;
-        }
-
-        .job h3, .education h3 {
-            margin: 0;
-            font-size: 1.2em;
-            color: #555;
-        }
-
-        .job p, .education p {
-            margin: 5px 0;
-            color: #777;
-        }
-
-        .skills {
-            list-style: none;
-            padding: 0;
-        }
-
-        .skills li {
-            display: inline-block;
-            background-color: #333;
-            color: #fff;
-            padding: 5px 10px;
-            margin: 5px;
-            border-radius: 5px;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            box-sizing: border-box;
-        }
-
-        button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
+<link rel="stylesheet" href="styles.css" >
 </head>
 <body>
     <div class="container">
@@ -151,35 +42,12 @@
             <section>
                 <h2>Skills</h2>
                 <ul class="skills" id="resumeSkills">
-                    <!-- Skills will appear here -->
+                   
                 </ul>
             </section>
         </div>
     </div>
 
-    <script>
-        function generateResume() {
-            document.getElementById('resumeName').innerText = document.getElementById('name').value;
-            document.getElementById('resumeTitle').innerText = document.getElementById('title').value;
-
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const website = document.getElementById('website').value;
-            const linkedin = document.getElementById('linkedin').value;
-            const contactInfo = `Email: ${email} | Phone: ${phone} | Website: ${website} | LinkedIn: ${linkedin}`;
-            document.getElementById('resumeContact').innerText = contactInfo;
-
-            document.getElementById('resumeSummary').innerText = document.getElementById('summary').value;
-
-            const experience = document.getElementById('experience').value.split('\n').map(exp => `<div class="job"><p>${exp}</p></div>`).join('');
-            document.getElementById('resumeExperience').innerHTML = experience;
-
-            const education = document.getElementById('education').value.split('\n').map(edu => `<div class="education"><p>${edu}</p></div>`).join('');
-            document.getElementById('resumeEducation').innerHTML = education;
-
-            const skills = document.getElementById('skills').value.split(',').map(skill => `<li>${skill.trim()}</li>`).join('');
-            document.getElementById('resumeSkills').innerHTML = skills;
-        }
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
