@@ -1,0 +1,108 @@
+ body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .form-container, .resume-container {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            overflow-y: auto;
+            max-height: 90vh;
+        }
+
+        .form-container {
+            max-width: 400px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #333;
+        }
+
+        header p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+
+        .job, .education {
+            margin-bottom: 10px;
+        }
+
+        .job h3, .education h3 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .job p, .education p {
+            margin: 5px 0;
+            color: #777;
+        }
+
+        .skills {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills li {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
